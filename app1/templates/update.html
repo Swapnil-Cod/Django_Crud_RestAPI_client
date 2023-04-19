@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name="name" value="{{users.name}}">
+        <hr>
+        <label>Email</label>
+        <input type="email" name="email" value="{{users.email}}">
+        <hr>
+        <label>Salary</label>
+        <input type="text" name="salary" value="{{users.salary}}">
+        <hr>
+        <label>Designation</label>
+        <input type="text" name="dsg" value="{{users.designation}}">
+        <hr>
+        <label>City</label>
+        <input type="text" name="city"value="{{users.city}}">
+        <hr>
+        <label>State</label>
+        <input type="text" name="state" value="{{users.state}}">
+        <br>
+        <button type="submit">Update Record</button>
+    </form>
+</body>
+</html>
